@@ -1,0 +1,14 @@
+<div ng-controller="LoginCtrl" class="col-md-4 col-md-offset-4">
+
+  <p><input class="form-control" type="text" placeholder="Login" ng-model="userLogin"/></p>
+  <p><input class="form-control" type="password" placeholder="Password" ng-model="userPassword"/></p>
+  <p><select class="form-control" ng-model="userNature">
+    <option ng-repeat="nature in natures">{{nature.name}}</option>
+  </select></p>
+
+  <p><button class="form-control btn-success" ng-click="login()" >Login</button></p>
+  <p>{{authResult}}</p>
+
+  <alert ng-repeat="alert in alerts" type="alert.type" close="closeAlert($index)">{{alert.msg}}</alert>
+
+</div>
